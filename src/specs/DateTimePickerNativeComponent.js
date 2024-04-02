@@ -16,25 +16,28 @@ type DateTimePickerEvent = $ReadOnly<{|
   utcOffset: Int32,
 |}>;
 
+type DateTimePickerMode = 'date' | 'time' | 'datetime' | 'countdown' | 'single' | 'range';
+type ThemeVariant = 'dark' | 'light' | 'unspecified'
+type DisplayStyle = 'default' | 'spinner' | 'compact' | 'inline';
+type PickerStyle = 'textfield-stepper' | 'clock-calendar' | 'textfield';
+
 type NativeProps = $ReadOnly<{|
   ...ViewProps,
-  accentColor?: ?ColorValue,
-  date?: ?Double,
-  displayIOS?: WithDefault<
-    'default' | 'spinner' | 'compact' | 'inline',
-    'default',
-  >,
-  locale?: ?string,
-  maximumDate?: ?Double,
-  minimumDate?: ?Double,
-  minuteInterval?: ?Int32,
-  mode?: WithDefault<'date' | 'time' | 'datetime' | 'countdown', 'date'>,
   onChange?: ?BubblingEventHandler<DateTimePickerEvent>,
   onPickerDismiss?: ?BubblingEventHandler<null>,
-  textColor?: ?ColorValue,
-  themeVariant?: WithDefault<'dark' | 'light' | 'unspecified', 'unspecified'>,
-  timeZoneName?: ?string,
+  maximumDate?: ?Double,
+  minimumDate?: ?Double,
+  date?: ?Double,
+  locale?: ?string,
+  minuteInterval?: ?Int32,
+  mode?: WithDefault<DateTimePickerMode, 'date'>,
   timeZoneOffsetInMinutes?: ?Double,
+  timeZoneName?: ?string,
+  textColor?: ?ColorValue,
+  accentColor?: ?ColorValue,
+  themeVariant?: WithDefault<ThemeVariant, 'unspecified'>,
+  displayIOS?: WithDefault<DisplayStyle, 'default'>,
+  pickerStyleMacOSX?: WithDefault<PickerStyle, 'textfield-stepper'>,
   enabled?: WithDefault<boolean, true>,
 |}>;
 
