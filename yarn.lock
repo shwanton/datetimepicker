@@ -2118,10 +2118,10 @@
   resolved "https://registry.yarnpkg.com/@rnx-kit/align-deps/-/align-deps-2.4.1.tgz#ef33e8df7d3a7f51e7d06a4d73915740ad3eeb94"
   integrity sha512-jvZK9vqQ3V7CvRb+C/EaAeBb1Ro6jHZTQD+C/z1wVBCtZN0j6vOXPmoaL5PIti2M+Fmlu+tfIcBFeYNKkGYeXA==
 
-"@rnx-kit/react-native-host@^0.2.9":
-  version "0.2.9"
-  resolved "https://registry.yarnpkg.com/@rnx-kit/react-native-host/-/react-native-host-0.2.9.tgz#ee9fd61254dbca75383b5fcdf9c8bb1f630b0985"
-  integrity sha512-iQWmisL5/UCp+U3vD1GqGThvBcTsgOpa/6p6IHKpywTfOLTNkdZiCDCHwHBekw3amedhGPdxCP7lmEbuVF8Udw==
+"@rnx-kit/react-native-host@^0.4.6":
+  version "0.4.6"
+  resolved "https://registry.yarnpkg.com/@rnx-kit/react-native-host/-/react-native-host-0.4.6.tgz#32424614afb64a544781e18f32a41473bcf8641a"
+  integrity sha512-wubQrIK6V6X8aeLRQDbtqg8NIYVG+PBFqQV1q82Oe3ML6qde+84gDB6H9G189Doe4ygFMU5pMXdLrzMIhx5o1Q==
 
 "@semantic-release/commit-analyzer@^9.0.2":
   version "9.0.2"
@@ -7124,7 +7124,7 @@ minimist-options@4.1.0:
     is-plain-obj "^1.1.0"
     kind-of "^6.0.3"
 
-minimist@^1.2.0, minimist@^1.2.5, minimist@^1.2.6, minimist@^1.2.8:
+minimist@^1.2.0, minimist@^1.2.5, minimist@^1.2.6:
   version "1.2.8"
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.8.tgz#c1a464e7693302e082a075cee0c057741ac4772c"
   integrity sha512-2yyAR8qBkN3YuheJanUpWC5U3bb5osDywNB8RzDVlDwDHbocAJveqqj1u8+SVD7jkWT4yvsHCpWqqWqAxb0zCA==
@@ -8362,20 +8362,19 @@ react-native-localize@^3.0.3:
   resolved "https://registry.yarnpkg.com/react-native-localize/-/react-native-localize-3.0.3.tgz#31c880162bb9bb7e3768da2fd02dd55608dea60e"
   integrity sha512-wlVIyg9lQac/Mg23aVKQAcnRkJgROjTUxZHFO4oqKpXkMa1XkvZ4DhhFc6TPnZX0O8YKvrTUsN3x8xMzVpAosg==
 
-react-native-test-app@^2.5.34:
-  version "2.5.35"
-  resolved "https://registry.yarnpkg.com/react-native-test-app/-/react-native-test-app-2.5.35.tgz#11bf4cb46faa8df5f3e28a5ef9578c3cfbbf4d53"
-  integrity sha512-B3Y0aE5wM+tGJbJRTk/CnxZvZKtn8XlNHB5i5Z8DjF4E+IHzUStDtK3yaak1wCDHYjJkh11Lm9VdmAGcko7Xgg==
+react-native-test-app@^3.5.3:
+  version "3.5.3"
+  resolved "https://registry.yarnpkg.com/react-native-test-app/-/react-native-test-app-3.5.3.tgz#6394948f8f09fe0c53d1ffec9567f7b5eeff7fb1"
+  integrity sha512-Bd6VANaTU8OSLfuKnaV0Cf0T2WkPDsRQojuRwrtcuB5O0kEXfx6vYJHJAjQOmwo7a2HaltNbNsNl6QANH+Z/Qg==
   dependencies:
-    "@rnx-kit/react-native-host" "^0.2.9"
+    "@rnx-kit/react-native-host" "^0.4.6"
     ajv "^8.0.0"
-    chalk "^4.1.0"
     cliui "^8.0.0"
     fast-xml-parser "^4.0.0"
-    minimist "^1.2.8"
     prompts "^2.4.0"
     semver "^7.3.5"
-    uuid "^8.3.2"
+    uuid "^9.0.0"
+    yoctocolors "^2.0.0"
 
 react-native-windows@^0.73.0:
   version "0.73.11"
@@ -9912,10 +9911,15 @@ uuid@^3.0.1, uuid@^3.3.2:
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.4.0.tgz#b23e4358afa8a202fe7a100af1f5f883f02007ee"
   integrity sha512-HjSDRw6gZE5JMggctHBcjVak08+KEVhSIiDzFnT9S9aegmp85S/bReBVTb4QTFaRNptJ9kuYaNhnbNEOkbKb/A==
 
-uuid@^8.3.0, uuid@^8.3.2:
+uuid@^8.3.0:
   version "8.3.2"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-8.3.2.tgz#80d5b5ced271bb9af6c445f21a1a04c606cefbe2"
   integrity sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==
+
+uuid@^9.0.0:
+  version "9.0.1"
+  resolved "https://registry.yarnpkg.com/uuid/-/uuid-9.0.1.tgz#e188d4c8853cc722220392c424cd637f32293f30"
+  integrity sha512-b+1eJOlsR9K8HJpow9Ok3fiWOWSIcIzXodvv0rQjVoOVNpWMpxf1wZNpt4y9h10odCNrqnYp1OBzRktckBe3sA==
 
 v8-to-istanbul@^9.0.1:
   version "9.2.0"
@@ -10260,3 +10264,8 @@ yocto-queue@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/yocto-queue/-/yocto-queue-0.1.0.tgz#0294eb3dee05028d31ee1a5fa2c556a6aaf10a1b"
   integrity sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==
+
+yoctocolors@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/yoctocolors/-/yoctocolors-2.0.0.tgz#f6cd83f1fd0b211594810a6de413202d6d177075"
+  integrity sha512-esbDnt0Z1zI1KgvOZU90hJbL6BkoUbrP9yy7ArNZ6TmxBxydMJTYMf9FZjmwwcA8ZgEQzriQ3hwZ0NYXhlFo8Q==
