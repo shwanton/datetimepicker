@@ -13,6 +13,7 @@
     "lint": "eslint .",
     "macos": "react-native run-macos --scheme date-time-picker-example",
     "mkdist": "node -e \"require('node:fs').mkdirSync('dist', { recursive: true, mode: 0o755 })\"",
+    "postinstall": "patch-package",
     "start": "react-native start",
     "test": "jest",
     "visionos": "react-native run-visionos",
