@@ -852,6 +852,8 @@ PODS:
   - React-Mapbuffer (0.73.6):
     - glog
     - React-debug
+  - react-native-segmented-control (2.5.0):
+    - React-Core
   - React-nativeconfig (0.73.6)
   - React-NativeModulesApple (0.73.6):
     - glog
@@ -1025,6 +1027,10 @@ PODS:
     - React-Core
     - React-jsi
   - ReactTestApp-Resources (1.0.0-dev)
+  - RNDateTimePicker (7.6.3):
+    - React-Core
+  - RNLocalize (3.0.6):
+    - React-Core
   - SocketRocket (0.6.1)
   - Yoga (1.14.0)
 
@@ -1057,6 +1063,7 @@ DEPENDENCIES:
   - React-jsinspector (from `../node_modules/react-native/ReactCommon/jsinspector-modern`)
   - React-logger (from `../node_modules/react-native/ReactCommon/logger`)
   - React-Mapbuffer (from `../node_modules/react-native/ReactCommon`)
+  - "react-native-segmented-control (from `../node_modules/@react-native-segmented-control/segmented-control`)"
   - React-nativeconfig (from `../node_modules/react-native/ReactCommon`)
   - React-NativeModulesApple (from `../node_modules/react-native/ReactCommon/react/nativemodule/core/platform/ios`)
   - React-perflogger (from `../node_modules/react-native/ReactCommon/reactperflogger`)
@@ -1080,6 +1087,8 @@ DEPENDENCIES:
   - "ReactNativeHost (from `../node_modules/@rnx-kit/react-native-host`)"
   - ReactTestApp-DevSupport (from `../node_modules/react-native-test-app`)
   - ReactTestApp-Resources (from `..`)
+  - "RNDateTimePicker (from `../node_modules/@react-native-community/datetimepicker`)"
+  - RNLocalize (from `../node_modules/react-native-localize`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
@@ -1140,6 +1149,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/logger"
   React-Mapbuffer:
     :path: "../node_modules/react-native/ReactCommon"
+  react-native-segmented-control:
+    :path: "../node_modules/@react-native-segmented-control/segmented-control"
   React-nativeconfig:
     :path: "../node_modules/react-native/ReactCommon"
   React-NativeModulesApple:
@@ -1186,6 +1197,10 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-test-app"
   ReactTestApp-Resources:
     :path: ".."
+  RNDateTimePicker:
+    :path: "../node_modules/@react-native-community/datetimepicker"
+  RNLocalize:
+    :path: "../node_modules/react-native-localize"
   Yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
@@ -1217,6 +1232,7 @@ SPEC CHECKSUMS:
   React-jsinspector: 85583ef014ce53d731a98c66a0e24496f7a83066
   React-logger: 3eb80a977f0d9669468ef641a5e1fabbc50a09ec
   React-Mapbuffer: 84ea43c6c6232049135b1550b8c60b2faac19fab
+  react-native-segmented-control: 712749e75728a736a2b8a7d7dbc8c2a3344b73e8
   React-nativeconfig: b4d4e9901d4cabb57be63053fd2aa6086eb3c85f
   React-NativeModulesApple: ae99dc0e80c9027f54572c45635449fbdc36e4f1
   React-perflogger: 5f49905de275bac07ac7ea7f575a70611fa988f2
@@ -1240,6 +1256,8 @@ SPEC CHECKSUMS:
   ReactNativeHost: 339df34d3c2050f37e8909ade6693465e8a947f7
   ReactTestApp-DevSupport: 1fe22a4a29414ec3227d20b3eb96217ba1ff13d0
   ReactTestApp-Resources: 857244f3a23f2b3157b364fa06cf3e8866deff9c
+  RNDateTimePicker: 7b38b71bcd7c4cfa1cb95f2dff9a4f1faed2dced
+  RNLocalize: 4222a3756cdbe2dc9a5bdf445765a4d2572107cb
   SocketRocket: f32cd54efbe0f095c4d7594881e52619cfe80b17
   Yoga: 805bf71192903b20fc14babe48080582fee65a80
 

@@ -20,9 +20,15 @@
   },
   "dependencies": {
     "@callstack/react-native-visionos": "^0.73.0",
+    "@react-native-community/datetimepicker": "../",
+    "@react-native-segmented-control/segmented-control": "^2.4.0",
+    "moment": "^2.24.0",
+    "moment-timezone": "^0.5.41",
     "react": "18.2.0",
     "react-native": "0.73.6",
+    "react-native-localize": "^3.0.3",
     "react-native-macos": "^0.73.0",
+    "react-native-test-app": "^3.5.3",
     "react-native-windows": "^0.73.0"
   },
   "devDependencies": {
