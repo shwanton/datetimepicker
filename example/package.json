@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "@callstack/react-native-visionos": "^0.73.0",
-    "@react-native-community/datetimepicker": "../",
+    "@react-native-community/datetimepicker": "workspace:*",
     "@react-native-segmented-control/segmented-control": "^2.4.0",
     "moment": "^2.24.0",
     "moment-timezone": "^0.5.41",
@@ -53,5 +53,6 @@
   },
   "engines": {
     "node": ">=18"
-  }
+  },
+  "packageManager": "yarn@4.1.1"
 }
