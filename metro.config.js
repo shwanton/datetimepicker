@@ -1,9 +1,9 @@
 /**
-  * Metro configuration for React Native
-  * https://github.com/facebook/react-native
-  *
-  * @format
-  */
+ * Metro configuration for React Native
+ * https://github.com/facebook/react-native
+ *
+ * @format
+ */
 
 const path = require('path');
 
