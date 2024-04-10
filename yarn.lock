@@ -2669,7 +2669,6 @@ __metadata:
     "@react-native-segmented-control/segmented-control": "npm:^2.4.0"
     "@react-native/eslint-config": "npm:^0.72.2"
     "@react-native/metro-config": "npm:^0.73.0"
-    "@rnx-kit/align-deps": "npm:^2.4.1"
     "@semantic-release/git": "npm:^10.0.1"
     "@testing-library/react-native": "npm:9.1.0"
     babel-jest: "npm:^29.5.0"
@@ -3163,15 +3162,6 @@ __metadata:
   peerDependencies:
     react-native: "*"
   checksum: 10c0/6b5b312b6a2bdd1adc99fa9bd2ee7809d37a523740bdb5500b73140fbcc3eea8c1f1348b7432da95ade9274d75082cb4d73590e200a0406c713417f9a07f9e18
-  languageName: node
-  linkType: hard
-
-"@rnx-kit/align-deps@npm:^2.4.1":
-  version: 2.4.1
-  resolution: "@rnx-kit/align-deps@npm:2.4.1"
-  bin:
-    rnx-align-deps: lib/index.js
-  checksum: 10c0/feb73afb3264397c964e5d1608867c8e17674099729c6f6999bd24a3238fd2d11ef20e56541770ec1283f058caac0f4bc2ef43be3169db3a295f42a36ba7a7eb
   languageName: node
   linkType: hard
 
