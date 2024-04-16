@@ -2677,10 +2677,10 @@ __metadata:
     eslint: "npm:^8.42.0"
     eslint-plugin-ft-flow: "npm:^2.0.1"
     eslint-plugin-prettier: "npm:^4.2.1"
-    flow-bin: "npm:^0.182.0"
-    flow-typed: "npm:^3.8.0"
+    flow-bin: "npm:^0.217.0"
+    flow-typed: "npm:^3.9.0"
     invariant: "npm:^2.2.4"
-    jest: "npm:^29.2.1"
+    jest: "npm:^29.5.0"
     moment: "npm:^2.24.0"
     moment-timezone: "npm:^0.5.41"
     patch-package: "npm:^6.4.7"
@@ -6726,12 +6726,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"flow-bin@npm:^0.182.0":
-  version: 0.182.0
-  resolution: "flow-bin@npm:0.182.0"
+"flow-bin@npm:^0.217.0":
+  version: 0.217.2
+  resolution: "flow-bin@npm:0.217.2"
   bin:
     flow: cli.js
-  checksum: 10c0/41551a556dff0793f49d35340960e7c6a02248f86fde59269f818f2b81e6d9e55a4f9e61488e9f8271b29259d07df607d70910ddba300ba4c37f2766ca89644f
+  checksum: 10c0/d9eb0ab7aca0fc0ec2f2cf53f334bd7654d1ac4120ad4636c6898d6be33d98692c87607d09e60e1c8ed472a03d033e062c1be59f182d0b5953c8ab98f7a94231
   languageName: node
   linkType: hard
 
@@ -6756,7 +6756,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"flow-typed@npm:^3.8.0":
+"flow-typed@npm:^3.9.0":
   version: 3.9.0
   resolution: "flow-typed@npm:3.9.0"
   dependencies:
@@ -8755,7 +8755,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jest@npm:^29.2.1":
+"jest@npm:^29.5.0":
   version: 29.7.0
   resolution: "jest@npm:29.7.0"
   dependencies:
