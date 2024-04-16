@@ -2,7 +2,7 @@ const project = (() => {
   const fs = require('fs');
   const path = require('path');
   try {
-    const { configureProjects } = require('react-native-test-app');
+    const {configureProjects} = require('react-native-test-app');
 
     return configureProjects({
       android: {
@@ -12,9 +12,15 @@ const project = (() => {
       ios: {
         sourceDir: 'example/ios',
       },
-      windows: fs.existsSync('example/windows/date-time-picker-example.sln') && {
+      windows: fs.existsSync(
+        'example/windows/date-time-picker-example.sln',
+      ) && {
         sourceDir: path.join('example', 'windows'),
-        solutionFile: path.join('example', 'windows', 'date-time-picker-example.sln'),
+        solutionFile: path.join(
+          'example',
+          'windows',
+          'date-time-picker-example.sln',
+        ),
         project: path.join(__dirname, 'example', 'windows'),
       },
     });
@@ -35,15 +41,8 @@ module.exports = {
       windows: {
         sourceDir: 'windows',
         solutionFile: 'DateTimePickerWindows.sln',
-        projects: [
-          {
-            projectFile: 'DateTimePickerWindows/DateTimePickerWindows.vcxproj',
-            directDependency: true,
-          },
-        ],
       },
     },
   },
-  ...(project ? { project } : undefined),
+  ...(project ? {project} : undefined),
 };
-
