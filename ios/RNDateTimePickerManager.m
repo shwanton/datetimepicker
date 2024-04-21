@@ -13,13 +13,16 @@
 #import "RNDateTimePicker.h"
 #import <React/UIView+React.h>
 
+#if !TARGET_OS_OSX
 #ifndef __IPHONE_15_0
 @interface UIColor (Xcode12)
 + (instancetype) tintColor;
 @end
-#endif
+#endif // __IPHONE_15_0
+#endif // !TARGET_OS_OSX
 
-@implementation RCTConvert(UIDatePicker)
+#if !TARGET_OS_OSX
+@implementation RCTConvert (UIDatePicker)
 
 RCT_ENUM_CONVERTER(UIDatePickerMode, (@{
   @"time": @(UIDatePickerModeTime),
@@ -27,7 +30,19 @@ RCT_ENUM_CONVERTER(UIDatePickerMode, (@{
   @"datetime": @(UIDatePickerModeDateAndTime),
   @"countdown": @(UIDatePickerModeCountDownTimer),
 }), UIDatePickerModeTime, integerValue)
+#else
+@implementation RCTConvert (NSDatePicker)
 
+RCT_ENUM_CONVERTER(NSDatePickerMode, (@{
+  @"single": @(NSSingleDateMode),
+  @"range": @(NSRangeDateMode)
+}), NSSingleDateMode, unsignedIntegerValue)
+RCT_ENUM_CONVERTER(NSDatePickerStyle, (@{
+  @"textfield-stepper": @(NSTextFieldAndStepperDatePickerStyle),
+  @"clock-calendar": @(NSClockAndCalendarDatePickerStyle),
+  @"textfield": @(NSTextFieldDatePickerStyle)
+}), NSTextFieldAndStepperDatePickerStyle, unsignedIntegerValue)
+#endif // !TARGET_OS_OSX
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wunguarded-availability-new"
@@ -51,8 +66,6 @@ RCT_ENUM_CONVERTER(UIUserInterfaceStyle, (@{
 
 #endif
 #pragma clang diagnostic pop
-
-
 @end
 
 @implementation RNDateTimePickerManager {
@@ -72,7 +85,7 @@ RCT_EXPORT_MODULE()
   return true;
 }
 
-- (UIView *)view
+- (RCTPlatformView *)view
 {
   return [RNDateTimePicker new];
 }
@@ -84,6 +97,7 @@ RCT_EXPORT_MODULE()
   return shadowView;
 }
 
+#if !TARGET_OS_OSX
 + (NSString*) datepickerStyleToString: (UIDatePickerStyle) style  API_AVAILABLE(ios(13.4)){
     // RCTConvert does not handle this.?
     switch (style) {
@@ -100,6 +114,7 @@ RCT_EXPORT_MODULE()
             return @"";
     }
 }
+#endif // !TARGET_OS_OSX
 
 RCT_EXPORT_SHADOW_PROPERTY(date, NSDate)
 RCT_EXPORT_SHADOW_PROPERTY(mode, UIDatePickerMode)
@@ -107,6 +122,7 @@ RCT_EXPORT_SHADOW_PROPERTY(locale, NSLocale)
 RCT_EXPORT_SHADOW_PROPERTY(displayIOS, RNCUIDatePickerStyle)
 RCT_EXPORT_SHADOW_PROPERTY(timeZoneName, NSString)
 
+#if !TARGET_OS_OSX
 RCT_EXPORT_VIEW_PROPERTY(date, NSDate)
 RCT_EXPORT_VIEW_PROPERTY(locale, NSLocale)
 RCT_EXPORT_VIEW_PROPERTY(minimumDate, NSDate)
@@ -115,10 +131,18 @@ RCT_EXPORT_VIEW_PROPERTY(minuteInterval, NSInteger)
 RCT_EXPORT_VIEW_PROPERTY(enabled, BOOL)
 RCT_EXPORT_VIEW_PROPERTY(onChange, RCTBubblingEventBlock)
 RCT_EXPORT_VIEW_PROPERTY(onPickerDismiss, RCTBubblingEventBlock)
-
 RCT_REMAP_VIEW_PROPERTY(mode, datePickerMode, UIDatePickerMode)
 RCT_REMAP_VIEW_PROPERTY(timeZoneOffsetInMinutes, timeZone, NSTimeZone)
+#else
+RCT_REMAP_VIEW_PROPERTY(date, dateValue, NSDate)
+RCT_REMAP_VIEW_PROPERTY(minimumDate, minDate, NSDate)
+RCT_REMAP_VIEW_PROPERTY(maximumDate, maxDate, NSDate)
+RCT_EXPORT_VIEW_PROPERTY(onChange, RCTBubblingEventBlock)
+RCT_REMAP_VIEW_PROPERTY(timeZoneOffsetInMinutes, timeZone, NSTimeZone)
+RCT_REMAP_VIEW_PROPERTY(pickerStyle, datePickerStyle, NSDatePickerStyle)
+#endif // !TARGET_OS_OSX
 
+#if !TARGET_OS_OSX
 RCT_CUSTOM_VIEW_PROPERTY(themeVariant, UIUserInterfaceStyle, RNDateTimePicker) {
     if (@available(iOS 13.0, *)) {
         if (json) {
@@ -194,5 +218,6 @@ RCT_CUSTOM_VIEW_PROPERTY(timeZoneName, NSString, RNDateTimePicker)
         view.timeZone = NSTimeZone.localTimeZone;
     }
 }
+#endif // !TARGET_OS_OSX
 
 @end
