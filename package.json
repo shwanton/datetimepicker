@@ -67,6 +67,7 @@
   },
   "homepage": "https://github.com/react-native-community/datetimepicker#readme",
   "devDependencies": {
+    "@react-native-picker/picker": "^2.7.5",
     "@react-native-segmented-control/segmented-control": "^2.5.2",
     "@react-native/eslint-config": "^0.72.2",
     "@react-native/metro-config": "^0.73.2",
