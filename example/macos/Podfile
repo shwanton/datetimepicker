@@ -6,8 +6,4 @@ require "#{ws_dir}/node_modules/react-native-test-app/macos/test_app.rb"
 
 workspace 'date-time-picker-example.xcworkspace'
 
-use_test_app! do |target|
-  target.app do
-    pod 'RNDateTimePicker', :path => '../../RNDateTimePicker.podspec'
-  end
-end
+use_test_app!

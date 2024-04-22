@@ -1085,7 +1085,7 @@ DEPENDENCIES:
   - "ReactNativeHost (from `../../node_modules/@rnx-kit/react-native-host`)"
   - ReactTestApp-DevSupport (from `../../node_modules/react-native-test-app`)
   - ReactTestApp-Resources (from `..`)
-  - RNDateTimePicker (from `../../RNDateTimePicker.podspec`)
+  - RNDateTimePicker (from `../..`)
   - RNLocalize (from `../../node_modules/react-native-localize`)
   - SocketRocket (from `../../node_modules/react-native-macos/third-party-podspecs/SocketRocket.podspec`)
   - Yoga (from `../../node_modules/react-native-macos/ReactCommon/yoga`)
@@ -1192,7 +1192,7 @@ EXTERNAL SOURCES:
   ReactTestApp-Resources:
     :path: ".."
   RNDateTimePicker:
-    :path: "../../RNDateTimePicker.podspec"
+    :path: "../.."
   RNLocalize:
     :path: "../../node_modules/react-native-localize"
   SocketRocket:
@@ -1256,6 +1256,6 @@ SPEC CHECKSUMS:
   SocketRocket: f6c6249082c011e6de2de60ed641ef8bbe0cfac9
   Yoga: 24ddb4963e2a3330df762423f0a9de2096325401
 
-PODFILE CHECKSUM: eeff52b2c83d128a4c0c9c45e5ea37ddfb3a1c67
+PODFILE CHECKSUM: b4f8f5b5c06a20c31bb158492e91e9f9fbc97fe7
 
 COCOAPODS: 1.14.2
